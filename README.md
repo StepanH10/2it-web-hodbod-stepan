@@ -6,6 +6,6 @@
 ### jednoduše stáhněte celou složku "vizitka" a otevřete soubor index.html
 # Zdroje
 ### www.w3schools.com
-### colorhunt.co
+### www.colorhunt.co
 ### www.youtube.com/watch?v=yC79xscT888
-### get-qr.com
+### www.get-qr.com
