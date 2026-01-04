@@ -1,0 +1,151 @@
+:root {
+  --primary-color: black;
+  --secondary-color: rgb(133, 88, 6);
+}
+
+
+
+
+
+#hero video {
+    background-position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  font-family: OCR A Std, monospace;
+}
+
+.gbackground {
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: solid 2px var(--secondary-color);
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.5px 20px #11000038;
+    backdrop-filter: blur(1px);
+}
+.spacex img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+}
+.name h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.email{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+
+
+.email-link {
+    color: #000000; 
+    text-decoration: none; 
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.email-link:hover {
+    color: var(--secondary-color); 
+    border-bottom: 1px solid var(--secondary-color); 
+    text-shadow: 0 0 8px #ffffff; 
+}
+
+.X {
+    position: absolute;
+    top: 45%;
+    left: 14%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.tel {
+    position: absolute;
+    top: 55%;
+    left: 26%;
+    transform: translate(-50%,-50%);
+    font-size: 1.4em;
+    color: var(--primary-color);
+}
+
+
+.phone-number {
+  cursor: pointer; 
+  color:  black;
+  transition: 0.3s;
+  position: relative;
+}
+
+.phone-number:hover {
+  text-shadow: 0 0 10px var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+
+.tooltip {
+  visibility: hidden;
+  background-color: var(--secondary-color);
+  color: #000;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: bold;
+}
+
+.tooltip.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.qrcode img{
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+}
+
+
+.qoute {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    font-size: 1.1em;
+    color: var(--primary-color);
+
+}

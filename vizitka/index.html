@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="hero">
+    <video autoplay muted loop >
+        <source src="blackhole6.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="gbackground">
+    <div class="spacex">
+        <img src="spacexlogo1.png" alt="SpaceX Logo">
+    </div>
+    <div class="name">
+        <h1>Elon Musk</h1>
+    </div>
+
+<section class="links">
+    <div class="email">
+        <p><b>E:</b> <a href="mailto:elon@spacex.com" class="email-link">elon@spacex.com</a> </p>
+    </div>
+    
+    <div class="X">
+        <p><b>X:</b> <a href="https://x.com/elonmusk" class="email-link">@elonmusk</a> </p>
+    </div>
+    
+    <div class="tel">
+        <p>
+        <b>P:</b>
+        <span id="copy-phone" class="phone-number" title="Klikni pro zkopírování">
+        +1 420 690 123
+        </span>
+        <span id="tooltip" class="tooltip">Zkopírováno!</span>
+        </p>
+    </div>
+</section>
+
+<div class="qoute">
+    <p><b>"I would like to die on mars. Just not on impact"</b></p>
+    <p>-Elon Musk</p>
+</div>
+
+    <div class="qrcode">
+        <img src="qrcode1.png" alt="QR Code">
+    </div>
+
+</div>
+
+
+
+<script>
+  const phoneElement = document.getElementById('copy-phone');
+  const tooltip = document.getElementById('tooltip');
+
+  phoneElement.addEventListener('click', () => {
+    const text = phoneElement.innerText;
+    
+    // Samotné kopírování
+    navigator.clipboard.writeText(text).then(() => {
+      // Zobrazení potvrzení
+      tooltip.classList.add('visible');
+      
+      // Skrytí potvrzení po 1.5 sekundě
+      setTimeout(() => {
+        tooltip.classList.remove('visible');
+      }, 1500);
+    });
+  });
+</script>
+
+</body>
+</html>
