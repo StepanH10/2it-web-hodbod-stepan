@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,74 +8,162 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<div id="hero">
-    <video autoplay muted loop >
-        <source src="blackhole6.mp4" type="video/mp4">
-    </video>
-</div>
+    <section class="hero-section">
+        <div id="hero">
+            <video autoplay muted loop>
+                <source src="blackhole6.mp4" type="video/mp4">
+            </video>
+        </div>
 
-<div class="gbackground">
-    <div class="spacex">
-        <img src="spacexlogo1.png" alt="SpaceX Logo">
-    </div>
-    <div class="name">
-        <h1>Elon Musk</h1>
-    </div>
+        <div class="gbackground">
+            <div class="spacex">
+                <img src="spacexlogo1.png" alt="SpaceX Logo">
+            </div>
+            <div class="name">
+                <h1>Elon Musk</h1>
+            </div>
 
-<section class="links">
-    <div class="email">
-        <p><b>E:</b> <a href="mailto:elon@spacex.com" class="email-link">elon@spacex.com</a> </p>
-    </div>
-    
-    <div class="X">
-        <p><b>X:</b> <a href="https://x.com/elonmusk" class="email-link">@elonmusk</a> </p>
-    </div>
-    
-    <div class="tel">
-        <p>
-        <b>P:</b>
-        <span id="copy-phone" class="phone-number" title="Klikni pro zkopírování">
-        +1 420 690 123
-        </span>
-        <span id="tooltip" class="tooltip">Zkopírováno!</span>
-        </p>
-    </div>
-</section>
+            <section class="links">
+                <div class="email">
+                    <p><b>E:</b> <a href="mailto:elon@spacex.com" class="email-link">elon@spacex.com</a> </p>
+                </div>
 
-<div class="qoute">
-    <p><b>"I would like to die on mars. Just not on impact"</b></p>
-    <p>-Elon Musk</p>
-</div>
+                <div class="X">
+                    <p><b>X:</b> <a href="https://x.com/elonmusk" class="email-link">@elonmusk</a> </p>
+                </div>
 
-    <div class="qrcode">
-        <img src="qrcode1.png" alt="QR Code">
-    </div>
+                <div class="tel">
+                    <p>
+                        <b>P:</b>
+                        <span id="copy-phone" class="phone-number" title="Klikni pro zkopírování">
+                            +1 420 690 123
+                        </span>
+                        <span id="tooltip" class="tooltip">Zkopírováno!</span>
+                    </p>
+                </div>
+            </section>
 
-</div>
+            <div class="qoute">
+                <p><b>"I would like to die on mars. Just not on impact"</b></p>
+                <p>-Elon Musk</p>
+            </div>
+
+            <div class="qrcode">
+                <img src="qrcode1.png" alt="QR Code">
+            </div>
+            <div class="scroll-down"
+                style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; cursor: pointer; animation: bounce 2s infinite;">
+                <a href="#about" style="color: white; text-decoration: none;">▼</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="elon_musk_rocket.jpg" alt="Elon Musk Parallax" class="parallax-img">
+            </div>
+
+            <div class="about-content">
+                <h2 class="hidden"
+                    style="font-size: 2.5em; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 5px; color: var(--secondary-color);">
+                    About</h2>
+
+                <div class="bio-block hidden">
+                    <h3>Vizionář</h3>
+                    <p>Jsem Elon Musk. Mým životním posláním je udělat z lidstva meziplanetární druh a zajistit
+                        udržitelnou budoucnost pro naši planetu. Stavím rakety, které nás dostanou na Mars, a auta,
+                        která nepotřebují fosilní paliva.</p>
+                </div>
+
+                <div class="bio-block hidden" style="transition-delay: 400ms;">
+                    <h3>Inženýr</h3>
+                    <p>Jako zakladatel a hlavní inženýr SpaceX se soustředím na vývoj technologií, které nám umožní
+                        cestovat ke hvězdám. V Tesle vedu tým, který mění způsob, jakým svět využívá a ukládá energii.
+                    </p>
+                    <p>Nespokojím se s průměrem. Ať už jde o propojení lidského mozku s počítačem v Neuralinku, ražbu
+                        tunelů s The Boring Company nebo svobodu slova na platformě X, vždy hledám cesty, jak posunout
+                        hranice toho, co je možné.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-<script>
-  const phoneElement = document.getElementById('copy-phone');
-  const tooltip = document.getElementById('tooltip');
+    <script>
+        const phoneElement = document.getElementById('copy-phone');
+        const tooltip = document.getElementById('tooltip');
 
-  phoneElement.addEventListener('click', () => {
-    const text = phoneElement.innerText;
-    
-    // Samotné kopírování
-    navigator.clipboard.writeText(text).then(() => {
-      // Zobrazení potvrzení
-      tooltip.classList.add('visible');
-      
-      // Skrytí potvrzení po 1.5 sekundě
-      setTimeout(() => {
-        tooltip.classList.remove('visible');
-      }, 1500);
-    });
-  });
-</script>
+        phoneElement.addEventListener('click', () => {
+            const text = phoneElement.innerText;
+
+            // Samotné kopírování
+            navigator.clipboard.writeText(text).then(() => {
+                // Zobrazení potvrzení
+                tooltip.classList.add('visible');
+
+                // Skrytí potvrzení po 1.5 sekundě
+                setTimeout(() => {
+                    tooltip.classList.remove('visible');
+                }, 1500);
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hidden').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const parallaxImg = document.querySelector('.parallax-img');
+            const aboutContent = document.querySelector('.about-content');
+            const aboutSection = document.querySelector('.content-section');
+
+            if (aboutSection) {
+                const rect = aboutSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Check if section is visible
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    const scrollProgress = (windowHeight - rect.top);
+
+                    // Image parallax (Stronger)
+                    if (parallaxImg) {
+                        const imgSpeed = 0.15;
+                        const imgOffset = scrollProgress * imgSpeed;
+                        parallaxImg.style.transform = `translateY(${imgOffset}px)`;
+                    }
+
+                    // Text parallax (Subtle)
+                    if (aboutContent) {
+                        const textSpeed = 0.05; // 3x slower than image
+                        const textOffset = scrollProgress * textSpeed;
+                        aboutContent.style.transform = `translateY(${textOffset}px)`;
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
+
 </html>
